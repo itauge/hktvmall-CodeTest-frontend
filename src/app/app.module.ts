@@ -12,6 +12,13 @@ import {MatSortModule} from '@angular/material/sort';
 import {HttpClientJsonpModule, HttpClientModule} from "@angular/common/http";
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {ReactiveFormsModule} from "@angular/forms";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {MatNativeDateModule, MatRippleModule} from "@angular/material/core";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatButtonModule} from "@angular/material/button";
+import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
+
+
 
 @NgModule({
   declarations: [
@@ -20,16 +27,23 @@ import {ReactiveFormsModule} from "@angular/forms";
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatInputModule,
+    MatRippleModule,
     MatSliderModule,
     MatTableModule,
     MatSortModule,
     MatProgressSpinnerModule,
-    MatInputModule,
     MatPaginatorModule,
     HttpClientModule,
     HttpClientJsonpModule,
-    MatDatepickerModule,
     ReactiveFormsModule,
+    NgbModule,
+    NgbPaginationModule,
+    NgbAlertModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
