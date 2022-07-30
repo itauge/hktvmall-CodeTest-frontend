@@ -40,6 +40,7 @@ export class AppComponent implements OnInit{
     })
   }
 
+  // listen the calendar date
   startDate:any='';
   endDate:any='';
 
@@ -54,9 +55,6 @@ export class AppComponent implements OnInit{
     const momentDate = new Date(`${event.value}`); // Replace event.value with your date value
     const formattedDate = moment(momentDate).format("YYYY-MM-DD");
     this.endDate = formattedDate;
-
-    // this.events.push(`${event.value}`);
-    // console.log(`${this.events[0]}`);
 
     this.service.getDataByDate(this.startDate,this.endDate).subscribe(
       (data:any)=> {
